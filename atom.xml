@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://github.com/qianyigengwu/qianyigengwu.github.io</id>
+    <id>https://qianyigengwu.github.io</id>
     <title>Qyxw&apos;s Blog</title>
-    <updated>2020-07-06T12:13:39.728Z</updated>
+    <updated>2020-07-06T12:15:18.685Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://github.com/qianyigengwu/qianyigengwu.github.io"/>
-    <link rel="self" href="https://github.com/qianyigengwu/qianyigengwu.github.io/atom.xml"/>
+    <link rel="alternate" href="https://qianyigengwu.github.io"/>
+    <link rel="self" href="https://qianyigengwu.github.io/atom.xml"/>
     <subtitle>欲买桂花同载酒，终不似，少年游。</subtitle>
-    <logo>https://github.com/qianyigengwu/qianyigengwu.github.io/images/avatar.png</logo>
-    <icon>https://github.com/qianyigengwu/qianyigengwu.github.io/favicon.ico</icon>
+    <logo>https://qianyigengwu.github.io/images/avatar.png</logo>
+    <icon>https://qianyigengwu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Qyxw&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[写景]]></title>
-        <id>https://github.com/qianyigengwu/qianyigengwu.github.io/post/ci-bei-gu-shan-xia/</id>
-        <link href="https://github.com/qianyigengwu/qianyigengwu.github.io/post/ci-bei-gu-shan-xia/">
+        <id>https://qianyigengwu.github.io/post/ci-bei-gu-shan-xia/</id>
+        <link href="https://qianyigengwu.github.io/post/ci-bei-gu-shan-xia/">
         </link>
         <updated>2020-07-06T09:10:44.000Z</updated>
         <content type="html"><![CDATA[<p>一条青石板铺就的羊肠小道，从西向东而过，道旁长着些残柳，偶尔会将所剩无几的柳枝抛下，那些柳枝便伴随着枯叶，堆叠在小路两旁，被马蹄踏断。</p>
@@ -25,8 +25,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[开始]]></title>
-        <id>https://github.com/qianyigengwu/qianyigengwu.github.io/post/kai-shi/</id>
-        <link href="https://github.com/qianyigengwu/qianyigengwu.github.io/post/kai-shi/">
+        <id>https://qianyigengwu.github.io/post/kai-shi/</id>
+        <link href="https://qianyigengwu.github.io/post/kai-shi/">
         </link>
         <updated>2020-07-06T08:56:07.000Z</updated>
         <content type="html"><![CDATA[<p>今天重新弄一下博客，试着让一切重新开始吧。</p>
