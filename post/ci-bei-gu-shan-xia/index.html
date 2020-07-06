@@ -8,13 +8,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://github.com/qianyigengwu/qianyigengwu.github.io/favicon.ico?v=1594029588608">
+<link rel="shortcut icon" href="https://github.com/qianyigengwu/qianyigengwu.github.io/favicon.ico?v=1594030566587">
 <link rel="stylesheet" href="https://github.com/qianyigengwu/qianyigengwu.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
 
 
@@ -29,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://github.com/qianyigengwu/qianyigengwu.github.io">
-        <img src="https://github.com/qianyigengwu/qianyigengwu.github.io/images/avatar.png?v=1594029588608" class="site-logo">
+        <img src="https://github.com/qianyigengwu/qianyigengwu.github.io/images/avatar.png?v=1594030566587" class="site-logo">
         <h1 class="site-title">Qyxw&#39;s Blog</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -118,6 +125,12 @@
             
 
             
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
 
           </div>
 
@@ -140,6 +153,29 @@ var app = new Vue({
 </script>
 
 
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'd4c38f0ab4d386cfecce',
+        clientSecret: '377a89acd8ceb5e3a1913ab3608755d0c62241af',
+        repo: 'qianyigengwu.github.io',
+        owner: 'qianyigengwu',
+        admin: ['qianyigengwu'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
