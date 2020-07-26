@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>开始 | Qyxw&#39;s Blog</title>
+<title>Manjaro配置jack环境 | Qyxw&#39;s Blog</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -25,9 +25,13 @@
 
 
 
-    <meta name="description" content="今天重新弄一下博客，试着让一切重新开始吧。
-" />
-    <meta name="keywords" content="杂谈" />
+    <meta name="description" content="jack是个啥？
+声音驱动，比PulseAudio专业。
+安装相关包
+sudo pacman -S jack2 qjackctl realtime-privileges pulseaudio-jack
+
+(realtime-privileg..." />
+    <meta name="keywords" content="Linux" />
   </head>
   <body>
     <div id="app" class="main">
@@ -98,25 +102,67 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">开始</h2>
-            <div class="post-date">2020-07-06</div>
+            <h2 class="post-title">Manjaro配置jack环境</h2>
+            <div class="post-date">2020-07-26</div>
             
-              <div class="feature-container" style="background-image: url('https://qianyigengwu.github.io//post-images/kai-shi.jpg')">
+              <div class="feature-container" style="background-image: url('https://qianyigengwu.github.io//post-images/manjaro-pei-zhi-jack-huan-jing.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>今天重新弄一下博客，试着让一切重新开始吧。</p>
+              <p>jack是个啥？<br>
+声音驱动，比PulseAudio专业。</p>
+<h2 id="安装相关包">安装相关包</h2>
+<pre><code class="language-bash">sudo pacman -S jack2 qjackctl realtime-privileges pulseaudio-jack
+</code></pre>
+<p>(realtime-privileges不确定是否为必装包，其他为必装)</p>
+<h2 id="配置qjackctl">配置qjackctl</h2>
+<h3 id="将pulseaudio输出重定向到jack">将PulseAudio输出重定向到jack</h3>
+<p>在qjackctl主界面点击Setup -&gt;Options -&gt;Execute script after Startup，在后面的输入框输入<code>pactl load-module module-jack-sink channels=2; pactl load-module module-jack-source channels=2;pacmd set-default-sink jack_out</code></p>
+<h3 id="配置qjackctl自启动">配置qjackctl自启动</h3>
+<p>在Setup -&gt;Misc中勾选如下项：<br>
+<img src="https://qianyigengwu.github.io//post-images/1595753460644.png" alt="如图" loading="lazy"></p>
+<h2 id="配置runtime">配置runtime</h2>
+<p>将当前用户加入audio，runtime组：</p>
+<pre><code class="language-bash">sudo usermod -a -G audio 你的用户名
+sudo usermod -a -G realtime 你的用户名
+reboot
+</code></pre>
+<p>编辑配置文件：</p>
+<pre><code class="language-bash">sudo vim /etc/security/limits.conf
+</code></pre>
+<p>在“# End of file”前面加入这两行</p>
+<pre><code>@audio - rtprio 99
+@audio - memlock unlimited
+</code></pre>
+<h2 id="最关键的一步">最关键的一步</h2>
+<p>重启！~</p>
+<h2 id="音量太小怎么办">音量太小怎么办</h2>
+<pre><code class="language-bash">alsamixer
+</code></pre>
+<p>按F6选择你的声卡<br>
+把Master的值调高（键盘“上”键）</p>
+<h2 id="效果">效果</h2>
+<figure data-type="image" tabindex="1"><img src="https://qianyigengwu.github.io//post-images/1595753774892.png" alt="如图" loading="lazy"></figure>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://qianyigengwu.github.io/tag/SZw5QcLDG/" class="tag">
-                    杂谈
+                  <a href="https://qianyigengwu.github.io/tag/FvZLNyC4J/" class="tag">
+                    Linux
                   </a>
                 
               </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://qianyigengwu.github.io/post/ci-bei-gu-shan-xia/">
+                  <h3 class="post-title">
+                    写景
+                  </h3>
+                </a>
+              </div>
             
 
             
