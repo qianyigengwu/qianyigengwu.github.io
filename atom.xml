@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qianyigengwu.github.io/</id>
     <title>Qyxw&apos;s Blog</title>
-    <updated>2020-07-28T05:30:00.825Z</updated>
+    <updated>2020-08-01T06:08:02.868Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qianyigengwu.github.io/"/>
     <link rel="self" href="https://qianyigengwu.github.io/atom.xml"/>
@@ -10,6 +10,53 @@
     <logo>https://qianyigengwu.github.io/images/avatar.png</logo>
     <icon>https://qianyigengwu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Qyxw&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[从GRUB手动引导自己的manjaro]]></title>
+        <id>https://qianyigengwu.github.io/post/cong-grub-shou-dong-yin-dao-zi-ji-de-manjaro/</id>
+        <link href="https://qianyigengwu.github.io/post/cong-grub-shou-dong-yin-dao-zi-ji-de-manjaro/">
+        </link>
+        <updated>2020-08-01T05:05:06.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="写作背景">写作背景</h2>
+<p>一次突如其来的滚动更新（unstable源的）将我的Grub.cfg抹得一干二净，望着眼前冰冷的grub提示，我无奈踏上了修复之路。</p>
+<h2 id="修复过程简述">修复过程简述</h2>
+<p>1、手动开启显卡驱动<br>
+2、加载内核和initrd<br>
+3-1：进系统</p>
+<h3 id="手动开启显卡驱动">手动开启显卡驱动</h3>
+<p>在我的电脑上，想要成功进入系统，需要设置grub的显卡驱动。<br>
+要知道是否配置成功了显卡驱动，请输入videoinfo<br>
+一般而言，如果配置好了显卡驱动，你能看见这样的输出：<br>
+<img src="https://qianyigengwu.github.io//post-images/1596261365431.jpg" alt="正常输出" loading="lazy"><br>
+而当你看见这样的输出：<br>
+<img src="https://qianyigengwu.github.io//post-images/1596261393822.jpg" alt="非正常输出" loading="lazy"><br>
+请执行下面的指令手动配置显卡驱动：</p>
+<pre><code class="language-bash">insmod efi_gop
+insmod efi_uga
+insmod video_bochs
+insmod video_cirrus
+</code></pre>
+<h3 id="加载内核和initrd">加载内核和initrd</h3>
+<pre><code class="language-bash">linux /boot/vmlinuz（输入到此处时按tab补全，如果有多个版本的内核，请选择任意版本并记住其版本号） root=你根目录所在的分区
+</code></pre>
+<p><strong>eg: linux /boot/vmlinuz-</strong><code>5.7</code><strong>-x86_64 root=dev/sda2</strong></p>
+<p>这一步用来加载内核<br>
+然后输入一下指令：</p>
+<pre><code class="language-bash">initrd /boot/init（输入到此处时按tab补全，如果有多个版本，选择和内核版本一样的initrd或initramfs版本）
+</code></pre>
+<p><strong>eg: linux /boot/initramfs-</strong><code>5.7</code><strong>-x86_64.img</strong></p>
+<p>然后输入</p>
+<pre><code class="language-bash">boot
+</code></pre>
+<p>启动</p>
+<p>不出以外的话，你已经进了系统</p>
+<h3 id="意外情况">意外情况</h3>
+<p>进到了另外一个shell，叫做rootfs<br>
+原因：加载内核的时候你打了俩空格<br>
+<strong>linux[空格]/boot/vmlinuz-5.7-x86_64</strong><code>[空格]</code><strong>root=dev/sda2</strong><br>
+而不是<br>
+<strong>linux[空格]/boot/vmlinuz-5.7-x86_64</strong><code>[空格][空格]</code><strong>root=dev/sda2</strong></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Manjaro配置jack环境]]></title>
         <id>https://qianyigengwu.github.io/post/manjaro-pei-zhi-jack-huan-jing/</id>
