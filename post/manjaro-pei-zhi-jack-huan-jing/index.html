@@ -8,8 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://qianyigengwu.github.io//favicon.ico?v=1596262074079">
-<link rel="stylesheet" href="https://qianyigengwu.github.io//styles/main.css">
+<link rel="shortcut icon" href="https://qygw.vercel.app/favicon.ico?v=1596896399196">
+<link rel="stylesheet" href="https://qygw.vercel.app/styles/main.css">
 
 
 
@@ -32,8 +32,8 @@ sudo pacman -S jack2 qjackctl realtime-privileges pulseaudio-jack
       <div class="sidebar" :class="{ 'full-height': menuVisible }">
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
-      <a class="site-title-container" href="https://qianyigengwu.github.io/">
-        <img src="https://qianyigengwu.github.io//images/avatar.png?v=1596262074079" class="site-logo">
+      <a class="site-title-container" href="https://qygw.vercel.app">
+        <img src="https://qygw.vercel.app/images/avatar.png?v=1596896399196" class="site-logo">
         <h1 class="site-title">Qyxw&#39;s Blog</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -86,7 +86,7 @@ sudo pacman -S jack2 qjackctl realtime-privileges pulseaudio-jack
       欲买桂花同载酒，终不似，少年游。
     </div>
     <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://qianyigengwu.github.io//atom.xml" target="_blank">RSS</a>
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://qygw.vercel.app/atom.xml" target="_blank">RSS</a>
     </div>
   </div>
 </div>
@@ -98,7 +98,7 @@ sudo pacman -S jack2 qjackctl realtime-privileges pulseaudio-jack
             <h2 class="post-title">Manjaro配置jack环境</h2>
             <div class="post-date">2020-07-26</div>
             
-              <div class="feature-container" style="background-image: url('https://qianyigengwu.github.io//post-images/manjaro-pei-zhi-jack-huan-jing.png')">
+              <div class="feature-container" style="background-image: url('https://qygw.vercel.app/post-images/manjaro-pei-zhi-jack-huan-jing.png')">
               </div>
             
             <div class="post-content" v-pre>
@@ -113,7 +113,7 @@ sudo pacman -S jack2 qjackctl realtime-privileges pulseaudio-jack
 <p>在qjackctl主界面点击Setup -&gt;Options -&gt;Execute script after Startup，在后面的输入框输入<code>pactl load-module module-jack-sink channels=2; pactl load-module module-jack-source channels=2;pacmd set-default-sink jack_out</code></p>
 <h3 id="配置qjackctl自启动">配置qjackctl自启动</h3>
 <p>在Setup -&gt;Misc中勾选如下项：<br>
-<img src="https://qianyigengwu.github.io//post-images/1595753460644.png" alt="如图" loading="lazy"></p>
+<img src="https://qygw.vercel.app/post-images/1595753460644.png" alt="如图" loading="lazy"></p>
 <h2 id="配置runtime">配置runtime</h2>
 <p>将当前用户加入audio，runtime组：</p>
 <pre><code class="language-bash">sudo usermod -a -G audio 你的用户名
@@ -135,13 +135,13 @@ reboot
 <p>按F6选择你的声卡<br>
 把Master的值调高（键盘“上”键）</p>
 <h2 id="效果">效果</h2>
-<figure data-type="image" tabindex="1"><img src="https://qianyigengwu.github.io//post-images/1595753774892.png" alt="如图" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://qygw.vercel.app/post-images/1595753774892.png" alt="如图" loading="lazy"></figure>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://qianyigengwu.github.io/tag/FvZLNyC4J/" class="tag">
+                  <a href="https://qygw.vercel.app/tag/FvZLNyC4J/" class="tag">
                     Linux
                   </a>
                 
@@ -150,7 +150,7 @@ reboot
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://qianyigengwu.github.io/post/ci-bei-gu-shan-xia/">
+                <a href="https://qygw.vercel.app/post/ci-bei-gu-shan-xia/">
                   <h3 class="post-title">
                     写景
                   </h3>

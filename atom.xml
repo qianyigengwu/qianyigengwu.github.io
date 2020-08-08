@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://qianyigengwu.github.io/</id>
+    <id>https://qygw.vercel.app</id>
     <title>Qyxw&apos;s Blog</title>
-    <updated>2020-08-01T06:08:02.868Z</updated>
+    <updated>2020-08-08T14:20:02.701Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://qianyigengwu.github.io/"/>
-    <link rel="self" href="https://qianyigengwu.github.io/atom.xml"/>
+    <link rel="alternate" href="https://qygw.vercel.app"/>
+    <link rel="self" href="https://qygw.vercel.app/atom.xml"/>
     <subtitle>欲买桂花同载酒，终不似，少年游。</subtitle>
-    <logo>https://qianyigengwu.github.io/images/avatar.png</logo>
-    <icon>https://qianyigengwu.github.io/favicon.ico</icon>
+    <logo>https://qygw.vercel.app/images/avatar.png</logo>
+    <icon>https://qygw.vercel.app/favicon.ico</icon>
     <rights>All rights reserved 2020, Qyxw&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[从GRUB手动引导自己的manjaro]]></title>
-        <id>https://qianyigengwu.github.io/post/cong-grub-shou-dong-yin-dao-zi-ji-de-manjaro/</id>
-        <link href="https://qianyigengwu.github.io/post/cong-grub-shou-dong-yin-dao-zi-ji-de-manjaro/">
+        <id>https://qygw.vercel.app/post/cong-grub-shou-dong-yin-dao-zi-ji-de-manjaro/</id>
+        <link href="https://qygw.vercel.app/post/cong-grub-shou-dong-yin-dao-zi-ji-de-manjaro/">
         </link>
         <updated>2020-08-01T05:05:06.000Z</updated>
         <content type="html"><![CDATA[<h2 id="写作背景">写作背景</h2>
@@ -26,9 +26,9 @@
 <p>在我的电脑上，想要成功进入系统，需要设置grub的显卡驱动。<br>
 要知道是否配置成功了显卡驱动，请输入videoinfo<br>
 一般而言，如果配置好了显卡驱动，你能看见这样的输出：<br>
-<img src="https://qianyigengwu.github.io//post-images/1596261365431.jpg" alt="正常输出" loading="lazy"><br>
+<img src="https://qygw.vercel.app/post-images/1596261365431.jpg" alt="正常输出" loading="lazy"><br>
 而当你看见这样的输出：<br>
-<img src="https://qianyigengwu.github.io//post-images/1596261393822.jpg" alt="非正常输出" loading="lazy"><br>
+<img src="https://qygw.vercel.app/post-images/1596261393822.jpg" alt="非正常输出" loading="lazy"><br>
 请执行下面的指令手动配置显卡驱动：</p>
 <pre><code class="language-bash">insmod efi_gop
 insmod efi_uga
@@ -59,8 +59,8 @@ insmod video_cirrus
     </entry>
     <entry>
         <title type="html"><![CDATA[Manjaro配置jack环境]]></title>
-        <id>https://qianyigengwu.github.io/post/manjaro-pei-zhi-jack-huan-jing/</id>
-        <link href="https://qianyigengwu.github.io/post/manjaro-pei-zhi-jack-huan-jing/">
+        <id>https://qygw.vercel.app/post/manjaro-pei-zhi-jack-huan-jing/</id>
+        <link href="https://qygw.vercel.app/post/manjaro-pei-zhi-jack-huan-jing/">
         </link>
         <updated>2020-07-26T08:44:41.000Z</updated>
         <content type="html"><![CDATA[<p>jack是个啥？<br>
@@ -74,7 +74,7 @@ insmod video_cirrus
 <p>在qjackctl主界面点击Setup -&gt;Options -&gt;Execute script after Startup，在后面的输入框输入<code>pactl load-module module-jack-sink channels=2; pactl load-module module-jack-source channels=2;pacmd set-default-sink jack_out</code></p>
 <h3 id="配置qjackctl自启动">配置qjackctl自启动</h3>
 <p>在Setup -&gt;Misc中勾选如下项：<br>
-<img src="https://qianyigengwu.github.io//post-images/1595753460644.png" alt="如图" loading="lazy"></p>
+<img src="https://qygw.vercel.app/post-images/1595753460644.png" alt="如图" loading="lazy"></p>
 <h2 id="配置runtime">配置runtime</h2>
 <p>将当前用户加入audio，runtime组：</p>
 <pre><code class="language-bash">sudo usermod -a -G audio 你的用户名
@@ -96,13 +96,13 @@ reboot
 <p>按F6选择你的声卡<br>
 把Master的值调高（键盘“上”键）</p>
 <h2 id="效果">效果</h2>
-<figure data-type="image" tabindex="1"><img src="https://qianyigengwu.github.io//post-images/1595753774892.png" alt="如图" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://qygw.vercel.app/post-images/1595753774892.png" alt="如图" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[写景]]></title>
-        <id>https://qianyigengwu.github.io/post/ci-bei-gu-shan-xia/</id>
-        <link href="https://qianyigengwu.github.io/post/ci-bei-gu-shan-xia/">
+        <id>https://qygw.vercel.app/post/ci-bei-gu-shan-xia/</id>
+        <link href="https://qygw.vercel.app/post/ci-bei-gu-shan-xia/">
         </link>
         <updated>2020-07-06T09:10:44.000Z</updated>
         <content type="html"><![CDATA[<p>一条青石板铺就的羊肠小道，从西向东而过，道旁长着些残柳，偶尔会将所剩无几的柳枝抛下，那些柳枝便伴随着枯叶，堆叠在小路两旁，被马蹄踏断。</p>
@@ -114,8 +114,8 @@ reboot
     </entry>
     <entry>
         <title type="html"><![CDATA[开始]]></title>
-        <id>https://qianyigengwu.github.io/post/kai-shi/</id>
-        <link href="https://qianyigengwu.github.io/post/kai-shi/">
+        <id>https://qygw.vercel.app/post/kai-shi/</id>
+        <link href="https://qygw.vercel.app/post/kai-shi/">
         </link>
         <updated>2020-07-06T08:56:07.000Z</updated>
         <content type="html"><![CDATA[<p>今天重新弄一下博客，试着让一切重新开始吧。</p>
